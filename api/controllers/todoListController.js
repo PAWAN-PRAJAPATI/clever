@@ -39,9 +39,8 @@ exports.read_a_task =function(req, res) {
   MongoClient.connect(url, function(err, db) {
 
     if (err) throw err;
-    var dbo = db.db("Todos");
-    
-    //var myobj = { name: "Company Inc", address: "Highway 37" };
+    var dbo = db.db("bdgt0ets7z2gj71"); 
+   //var myobj = { name: "Company Inc", address: "Highway 37" };
     dbo.collection("tasks").find({}).toArray(function(err, result) {
       console.log(result)
       res.json(result)
