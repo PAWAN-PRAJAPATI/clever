@@ -5,7 +5,7 @@ bodyParser = require('body-parser');
 
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://u7ehgyjt3zarc3h:lzdlv20kbLLYtJlekg43@bdgt0ets7z2gj71";
+var url = "mongodb://u7ehgyjt3zarc3h:lzdlv20kbLLYtJlekg43@bdgt0ets7z2gj71-mongodb.services.clever-cloud.com:27017/bdgt0ets7z2gj71";
 
 // mongoose instance connection url connection
 MongoClient.connect(url, function(err, db) {
