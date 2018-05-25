@@ -6,12 +6,12 @@ bodyParser = require('body-parser');
 
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
+var url = "mongodb://u7ehgyjt3zarc3h:lzdlv20kbLLYtJlekg43@bdgt0ets7z2gj71-mongodb.services.clever-";
 
 // mongoose instance connection url connection
 MongoClient.connect(url, function(err, db) {
     if (err) throw err;
-    var dbo = db.db("Todos");
+    var dbo = db.db("bdgt0ets7z2gj71");
     dbo.createCollection("tasks", function(err, res) {
       if (err) throw err;
       console.log("Collection created!");
@@ -23,8 +23,6 @@ MongoClient.connect(url, function(err, db) {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
 
@@ -32,7 +30,7 @@ var routes = require('./api/routes/todoListRoutes'); //importing route
 routes(app); //register the route
 
 
-app.listen(port);
+app.listen(process.env.PORT, '0.0.0.0');
 
 
 console.log('todo list RESTful API server started on: ' + port);
