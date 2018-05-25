@@ -1,12 +1,12 @@
 {
-  "name" : "clever",
-  "version" : "0.1.0",
-  "main" : "server.js",
-  "scripts" : {
-    "start" : "node server.js"
+  "name": "clever",
+  "version": "0.1.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
   },
   "engines": {
-    "node": "0.8.15"
+    "node": "10.1.0"
   },
   "dependencies": {
     "express": "4.16.3"
