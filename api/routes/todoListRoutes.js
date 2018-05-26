@@ -8,10 +8,10 @@ module.exports = function(app) {
       next();
      });
     
-    app.route('/taskget')
+    app.route('/tasksget')
       .get(todoList.create_a_task);
     
-    app.route('/taskget')
+    app.route('/tasksget')
       .post(todoList.read_a_task)
   };
   
