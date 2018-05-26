@@ -1,7 +1,7 @@
-/*
+
 var express = require('express'),
 app = express(),
-port = process.env.PORT || 4000,
+port = process.env.PORT || 5000,
 bodyParser = require('body-parser');
 
 
@@ -38,13 +38,13 @@ app.listen(5000,'0.0.0.0');
 
 
 console.log('todo list RESTful API server started on: ' + port);
-*/
 
 
 
 
 
 
+/*
 
 var express = require('express'),
 app = express(),
@@ -66,7 +66,7 @@ app.use('/tasksget', function(req, res, next) {
   try{req.body = JSON.parse(Object.keys(req.body)[0])}catch(err){req.body = req.body}
 
 
-  console.log(req.body);
+  console.log(req.body.data);
   res.send(JSON.stringify(req.body));
 });
 
@@ -74,3 +74,4 @@ app.listen(5000,'0.0.0.0');
 
 
 console.log('todo list RESTful API server started on: ' + port);
+*/
