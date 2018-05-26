@@ -8,11 +8,11 @@ module.exports = function(app) {
       next();
      });
     
-    app.route('/getall')
+    app.route('/taskget')
       .get(todoList.create_a_task);
     
-    app.route('/tasks')
-      .get(todoList.read_a_task)
+    app.route('/taskget')
+      .post(todoList.read_a_task)
   };
   
   
