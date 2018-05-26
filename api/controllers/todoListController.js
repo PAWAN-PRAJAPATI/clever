@@ -43,7 +43,7 @@ exports.read_a_task =function(req, res) {
    //var myobj = { name: "Company Inc", address: "Highway 37" };
     dbo.collection("tasks").find({}).toArray(function(err, result) {
       console.log(res.body)
-      res.json(res.body)
+      res.json(JSON.stringify(res.body))
     });
   });
 };
