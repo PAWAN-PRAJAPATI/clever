@@ -20,7 +20,8 @@ router.get('/google/redirect',passport.authenticate('google'),(req,res)=>{
 })
 
 router.get('/logout',(req,res)=>{
-    res.send('logout')
+    req.logout()
+    res.redirect('/auth/google')
 })
 
 module.exports = router
