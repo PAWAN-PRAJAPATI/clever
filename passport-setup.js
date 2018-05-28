@@ -1,7 +1,5 @@
 const passport = require('passport');
-const GoogleStrategy = require('passport-google-oauth20');
-//ClintID 208477398781-aoee5f5c8ru03jthiile1trjah0egb7e.apps.googleusercontent.com
-//CLineSecrete JbD21ZOwah-D4aLCuHSWpzqz
+
 const User = require('./user-model')
 
 //node sends
@@ -20,8 +18,8 @@ passport.use(
     new GoogleStrategy({
 
         callbackURL:'http://localhost:4000/auth/google/redirect',
-        clientID:'208477398781-aoee5f5c8ru03jthiile1trjah0egb7e.apps.googleusercontent.com',
-        clientSecret:'ufPvTKRsGu3y9A4GlUyLETBf'
+        clientID:CLINTE.id
+        clientSecret:CLINTE.secret
 
     },(accessToken,refreshToken,profile,done)=>{    
         console.log("Callback")
