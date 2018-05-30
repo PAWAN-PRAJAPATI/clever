@@ -7,8 +7,8 @@ const passport_Setup = require('./passport-setup')
 const mongoose = require('mongoose')
 const cookieSession = require('cookie-session');
 const passport = require('passport')
-//const KEYS = require("./keys.js")
-var url = (KEYS2.MONGO.url);
+const KEYS = require("./keys.js")
+var url = (KEYS.MONGO.url);
 
 const port = process.env.PORT || 4000
 
@@ -16,7 +16,7 @@ console.log(url)
 
 app.use(cookieSession({
     maxAge:24*60*60*1000,
-    keys:[KEYS5.COOKIE.key]
+    keys:[KEYS.COOKIE.key]
 }));
 
 app.use(passport.initialize());
