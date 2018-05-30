@@ -35,7 +35,7 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
+/*
 
 app.all('/auth', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -49,10 +49,10 @@ app.all('/profile', function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 },profileRoutes);
+*/
 
-
-//app.use('/profile',profileRoutes);
-//app.use('/auth',authRoutes);
+app.use('/profile',profileRoutes);
+app.use('/auth',authRoutes);
 
 
 mongoose.connect(url,()=>{
