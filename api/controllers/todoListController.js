@@ -1,11 +1,10 @@
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://u7ehgyjt3zarc3h:lzdlv20kbLLYtJlekg43@bdgt0ets7z2gj71-mongodb.services.clever-cloud.com:27017/bdgt0ets7z2gj71";
-
+var keys = '../../keys.js';
+const url = keys.MONGO.url
 
 
 exports.list_all_tasks = function(req, res) {
 
-//"mongodb://username:password@localhost:27017/exampledatabase", 
   Task.find({}, function(err, task) {
     if (err)
       res.send(err);

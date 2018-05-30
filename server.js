@@ -3,10 +3,10 @@ var express = require('express'),
 app = express(),
 port = process.env.PORT || 5000,
 bodyParser = require('body-parser');
-
+const keys = require('./keys.js')
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://u7ehgyjt3zarc3h:lzdlv20kbLLYtJlekg43@bdgt0ets7z2gj71-mongodb.services.clever-cloud.com:27017/bdgt0ets7z2gj71";
+var url = keys.MONGO.url
 
 // mongoose instance connection url connection
 MongoClient.connect(url, function(err, db) {

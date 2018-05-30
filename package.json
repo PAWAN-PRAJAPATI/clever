@@ -2,7 +2,7 @@
   "name": "clever",
   "version": "1.0.0",
   "description": "Hello Node",
-  "main": "server.js",
+  "main": "server1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

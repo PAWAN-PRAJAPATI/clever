@@ -7,13 +7,15 @@ const passport_Setup = require('./passport-setup')
 const mongoose = require('mongoose')
 const cookieSession = require('cookie-session');
 const passport = require('passport')
+const KEYS = require("./keys.js")
+var url = (KEYS.MONGO.url);
+const port = process.env.PORT || 4000
 
-var url = "mongodb://u7ehgyjt3zarc3h:lzdlv20kbLLYtJlekg43@bdgt0ets7z2gj71-mongodb.services.clever-cloud.com:27017/bdgt0ets7z2gj71";
-
+console.log(url)
 
 app.use(cookieSession({
     maxAge:24*60*60*1000,
-    keys:["Iampawan"]
+    keys:[KEYS.COOKIE.key]
 }));
 
 app.use(passport.initialize());
@@ -32,7 +34,7 @@ app.get('/',(req,res)=>{
     res.send(req.user)
 })
 
-app.listen(4000,()=>{
-    console.log("App is now listning for request on port 3000")
+app.listen(port,()=>{
+    console.log("App is now listning for request on port "+port)
 });
 
