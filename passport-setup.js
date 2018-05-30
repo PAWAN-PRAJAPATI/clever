@@ -1,7 +1,6 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20');
-//ClintID 208477398781-aoee5f5c8ru03jthiile1trjah0egb7e.apps.googleusercontent.com
-//CLineSecrete JbD21ZOwah-D4aLCuHSWpzqz
+
 const User = require('./user-model')
 const keys = require('./keys.js')
 //node sends
