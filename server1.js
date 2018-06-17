@@ -28,7 +28,7 @@ app.use(function(req, res, next) {
 
 
 app.use(cookieSession({
-    maxAge:24*60*60*1000,
+    maxAge:22*60*60*1000,
     keys:[KEYS.COOKIE.key]
 }));
 
